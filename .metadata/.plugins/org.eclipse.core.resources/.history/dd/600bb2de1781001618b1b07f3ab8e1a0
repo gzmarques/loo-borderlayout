@@ -66,8 +66,8 @@ public class Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				remove(panel);
-				layout.setVgap(30);
-				add(panel);
+//				layout.setVgap(30);
+//				add(panel);
 				
 			}
 		});

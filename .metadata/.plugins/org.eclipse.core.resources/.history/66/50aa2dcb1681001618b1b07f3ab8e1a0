@@ -1,7 +1,5 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -39,11 +37,10 @@ public class Frame extends JFrame {
 		layout.setVgap(10);
 		panel.setLayout(layout);
 		
-		JButton centerBtn = new JButton("Center");
-		JButton lineStart = new JButton("Line Start");
+		JButton center = new JButton("Center")
 		  
-		panel.add(centerBtn,BorderLayout.CENTER);
-		panel.add(lineStart,BorderLayout.LINE_START); 
+		panel.add(center,BorderLayout.CENTER);
+		panel.add(new JButton("Line Start"),BorderLayout.LINE_START); 
 		panel.add(new JButton("Line End"),BorderLayout.LINE_END);
 		panel.add(new JButton("East"),BorderLayout.EAST);   
 		panel.add(new JButton("West"),BorderLayout.WEST); 
@@ -52,25 +49,7 @@ public class Frame extends JFrame {
 		
 		this.add(panel);
 		
-		centerBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				centerBtn.setBackground(Color.ORANGE);
-			}
-		});
 		
-		lineStart.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				remove(panel);
-				layout.setVgap(30);
-				add(panel);
-				
-			}
-		});
 
 	}
 	
