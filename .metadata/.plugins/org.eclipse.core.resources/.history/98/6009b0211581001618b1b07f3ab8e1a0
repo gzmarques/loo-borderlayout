@@ -30,23 +30,24 @@ public class Frame extends JFrame {
 		add(menuBar, BorderLayout.SOUTH);
 		
 		JPanel panel = new JPanel();
-	    panel.setBackground(Color.darkGray);
-	    panel.setSize(300,300);
-	    BorderLayout layout = new BorderLayout();
-	    layout.setHgap(10);
-	    layout.setVgap(10);
-	    panel.setLayout(layout);        
+	      panel.setBackground(Color.darkGray);
+	      panel.setSize(300,300);
+	      BorderLayout layout = new BorderLayout();
+	      layout.setHgap(10);
+	      layout.setVgap(10);
+	      panel.setLayout(layout);        
 		  
-	    panel.add(new JButton("Center"),BorderLayout.CENTER);
-	    panel.add(new JButton("Line Start"),BorderLayout.LINE_START); 
-	    panel.add(new JButton("Line End"),BorderLayout.LINE_END);
-	    panel.add(new JButton("East"),BorderLayout.EAST);   
-	    panel.add(new JButton("West"),BorderLayout.WEST); 
-	    panel.add(new JButton("North"),BorderLayout.NORTH); 
-	    panel.add(new JButton("South"),BorderLayout.SOUTH); 
+	      panel.add(new JButton("Center"),BorderLayout.CENTER);
+	      panel.add(new JButton("Line Start"),BorderLayout.LINE_START); 
+	      panel.add(new JButton("Line End"),BorderLayout.LINE_END);
+	      panel.add(new JButton("East"),BorderLayout.EAST);   
+	      panel.add(new JButton("West"),BorderLayout.WEST); 
+	      panel.add(new JButton("North"),BorderLayout.NORTH); 
+	      panel.add(new JButton("South"),BorderLayout.SOUTH); 
 
-	    this.add(panel);
+	      this.add(panel);
 
+	      this.setVisible(true);  
 	}
 	
 }
