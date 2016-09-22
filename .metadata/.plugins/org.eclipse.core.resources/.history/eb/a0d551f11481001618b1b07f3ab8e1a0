@@ -45,7 +45,7 @@ public class Frame extends JFrame {
 	      panel.add(new JButton("North"),BorderLayout.NORTH); 
 	      panel.add(new JButton("South"),BorderLayout.SOUTH); 
 
-	      this.add(panel);
+	      controlPanel.add(panel);
 
 	      this.setVisible(true);  
 	}
