@@ -1,6 +1,5 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -26,9 +25,8 @@ public class Frame extends JFrame {
 
 	public Frame() {
 		screens = new ArrayList<JPanel>();
-		Dimension d = new Dimension(800, 600);
 		
-		setMinimumSize(d);
+		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setVisible(true);
 		//setdefault encerra a execução do sistema quando fechada a tela
@@ -43,7 +41,7 @@ public class Frame extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.darkGray);
-		panel.setMinimumSize(d);
+		panel.setSize(800,600);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(10);
 		layout.setVgap(10);
@@ -82,11 +80,10 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				currentPanel.setVisible(false);
+//				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(1);
 				add(currentPanel);
-				setMinimumSize(new Dimension(100, 100));
 				pack();
 				
 			}
@@ -97,12 +94,10 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				
 				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(2);
 				add(currentPanel);
-				setMinimumSize(new Dimension(1000, 300));
 				pack();
 			}
 		});

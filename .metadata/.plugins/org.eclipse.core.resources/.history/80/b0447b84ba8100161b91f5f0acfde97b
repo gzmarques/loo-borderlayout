@@ -26,7 +26,7 @@ public class Frame extends JFrame {
 
 	public Frame() {
 		screens = new ArrayList<JPanel>();
-		Dimension d = new Dimension(800, 600);
+		Dimension d = new Dimension(800, 600)
 		
 		setMinimumSize(d);
 		setLayout(new BorderLayout());
@@ -43,7 +43,7 @@ public class Frame extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.darkGray);
-		panel.setMinimumSize(d);
+		panel.setMinimumSize(800,600);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(10);
 		layout.setVgap(10);
@@ -82,11 +82,10 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				currentPanel.setVisible(false);
+//				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(1);
 				add(currentPanel);
-				setMinimumSize(new Dimension(100, 100));
 				pack();
 				
 			}
@@ -97,12 +96,10 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				
 				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(2);
 				add(currentPanel);
-				setMinimumSize(new Dimension(1000, 300));
 				pack();
 			}
 		});

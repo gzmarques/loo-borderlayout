@@ -2,6 +2,7 @@ package panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +16,6 @@ public class Screen2 extends JPanel {
 	
 	public Screen2(Frame frame) {
 		this.frame = frame;
-		frame.setSize(800,600);
 		setBackground(Color.RED);
 		setSize(700,600);
 		setVisible(true);

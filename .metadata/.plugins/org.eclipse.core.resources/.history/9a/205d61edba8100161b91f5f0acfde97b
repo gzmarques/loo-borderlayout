@@ -82,11 +82,10 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				currentPanel.setVisible(false);
+//				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(1);
 				add(currentPanel);
-				setMinimumSize(new Dimension(100, 100));
 				pack();
 				
 			}
@@ -97,12 +96,11 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				
+				setMinimumSize(new Dimension(1000, 300));
 				currentPanel.setVisible(false);
 				remove(currentPanel);
 				currentPanel = screens.get(2);
 				add(currentPanel);
-				setMinimumSize(new Dimension(1000, 300));
 				pack();
 			}
 		});

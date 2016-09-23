@@ -2,7 +2,6 @@ package panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -11,7 +10,7 @@ public class Screen1 extends JPanel {
 	
 	public Screen1() {
 		setBackground(Color.GREEN);
-		setMinimumSize(new Dimension(1000, 300));
+		setSize(300,300);
 		setVisible(true);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(30);
