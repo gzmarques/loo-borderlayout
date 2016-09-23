@@ -72,8 +72,13 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+<<<<<<< HEAD
 				panel.setVisible(false);
 				JPanel panel = new Screen1();
+=======
+				remove(panel);
+				panel = new Screen1();
+>>>>>>> d649b20d7f0306d3fc4deba1bb1758c6a3df5a6d
 				add(panel);
 				pack();
 				
@@ -85,8 +90,13 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+<<<<<<< HEAD
 				panel.setVisible(false);
-				panel = new Screen2(frame);
+				JPanel panel = new Screen2(frame);
+=======
+				remove(panel);
+				panel = new Screen2();
+>>>>>>> d649b20d7f0306d3fc4deba1bb1758c6a3df5a6d
 				add(panel);
 				pack();
 			}

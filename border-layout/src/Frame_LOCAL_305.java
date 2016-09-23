@@ -36,7 +36,7 @@ public class Frame extends JFrame {
 		menuBar.add(file);
 		add(menuBar, BorderLayout.SOUTH);
 		
-		this.panel = new JPanel();
+		JPanel panel = new JPanel();
 		panel.setBackground(Color.darkGray);
 		panel.setSize(800,600);
 		BorderLayout layout = new BorderLayout();
@@ -86,7 +86,7 @@ public class Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				panel.setVisible(false);
-				panel = new Screen2(frame);
+				JPanel panel = new Screen2(frame);
 				add(panel);
 				pack();
 			}
@@ -95,4 +95,3 @@ public class Frame extends JFrame {
 	}
 	
 }
-

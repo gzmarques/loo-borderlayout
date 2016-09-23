@@ -22,7 +22,6 @@ public class Frame extends JFrame {
 	private JPanel panel;
 
 	public Frame() {
-		Frame frame = this;
 		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setVisible(true);
@@ -38,7 +37,7 @@ public class Frame extends JFrame {
 		
 		this.panel = new JPanel();
 		panel.setBackground(Color.darkGray);
-		panel.setSize(800,600);
+		panel.setSize(1000,500);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(10);
 		layout.setVgap(10);
@@ -72,8 +71,8 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				panel.setVisible(false);
-				JPanel panel = new Screen1();
+				remove(panel);
+				panel = new Screen1();
 				add(panel);
 				pack();
 				
@@ -85,8 +84,8 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				panel.setVisible(false);
-				panel = new Screen2(frame);
+				remove(panel);
+				panel = new Screen2();
 				add(panel);
 				pack();
 			}
