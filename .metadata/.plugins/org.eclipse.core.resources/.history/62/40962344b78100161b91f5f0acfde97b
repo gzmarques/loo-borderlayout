@@ -15,7 +15,6 @@ public class Screen2 extends JPanel {
 	
 	public Screen2(Frame frame) {
 		this.frame = frame;
-		frame.setSize(800,600);
 		setBackground(Color.RED);
 		setSize(700,600);
 		setVisible(true);
@@ -41,7 +40,7 @@ public class Screen2 extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 				frame.add(new Screen1());
-				frame.pack();
+				
 			}
 		});
 	}

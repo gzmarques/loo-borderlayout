@@ -20,12 +20,11 @@ public class Frame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = -5151041547543472432L;
-	private JPanel currentPanel;
-	private ArrayList<JPanel> screens;
+	private JPanel panel;
+	private ArrayList<JPanel> screens();
 
 	public Frame() {
-		screens = new ArrayList<JPanel>();
-		
+		Frame frame = this;
 		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setVisible(true);
@@ -39,7 +38,7 @@ public class Frame extends JFrame {
 		menuBar.add(file);
 		add(menuBar, BorderLayout.SOUTH);
 		
-		JPanel panel = new JPanel();
+		this.panel = new JPanel();
 		panel.setBackground(Color.darkGray);
 		panel.setSize(800,600);
 		BorderLayout layout = new BorderLayout();
@@ -58,13 +57,8 @@ public class Frame extends JFrame {
 		panel.add(new JButton("North"),BorderLayout.NORTH); 
 		panel.add(new JButton("South"),BorderLayout.SOUTH); 
 		
-		screens.add(panel);
-		screens.add(new Screen1());
-		screens.add(new Screen2(this));
-		
-		
-		currentPanel = panel;
 		this.add(panel);
+		
 		pack();
 		
 		centerBtn.addActionListener(new ActionListener() {
@@ -80,10 +74,9 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-//				currentPanel.setVisible(false);
-				remove(currentPanel);
-				currentPanel = screens.get(1);
-				add(currentPanel);
+				remove(panel);
+				JPanel panel = new Screen1();
+				add(panel);
 				pack();
 				
 			}
@@ -93,11 +86,10 @@ public class Frame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
-				currentPanel.setVisible(false);
-				remove(currentPanel);
-				currentPanel = screens.get(2);
-				add(currentPanel);
+				// TODO Auto-generated method stub
+				remove(panel);
+				panel = new Screen2(frame);
+				add(panel);
 				pack();
 			}
 		});

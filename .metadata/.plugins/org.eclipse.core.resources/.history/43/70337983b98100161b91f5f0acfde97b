@@ -62,8 +62,6 @@ public class Frame extends JFrame {
 		screens.add(new Screen1());
 		screens.add(new Screen2(this));
 		
-		
-		currentPanel = panel;
 		this.add(panel);
 		pack();
 		
@@ -81,7 +79,7 @@ public class Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 //				currentPanel.setVisible(false);
-				remove(currentPanel);
+				remove(Frame.currentPanel);
 				currentPanel = screens.get(1);
 				add(currentPanel);
 				pack();

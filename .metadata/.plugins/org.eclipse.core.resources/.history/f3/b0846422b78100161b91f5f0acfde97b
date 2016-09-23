@@ -20,7 +20,7 @@ public class Frame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = -5151041547543472432L;
-	private JPanel currentPanel;
+	private JPanel panel;
 	private ArrayList<JPanel> screens;
 
 	public Frame() {
@@ -39,7 +39,7 @@ public class Frame extends JFrame {
 		menuBar.add(file);
 		add(menuBar, BorderLayout.SOUTH);
 		
-		JPanel panel = new JPanel();
+		this.panel = new JPanel();
 		panel.setBackground(Color.darkGray);
 		panel.setSize(800,600);
 		BorderLayout layout = new BorderLayout();
@@ -62,8 +62,6 @@ public class Frame extends JFrame {
 		screens.add(new Screen1());
 		screens.add(new Screen2(this));
 		
-		
-		currentPanel = panel;
 		this.add(panel);
 		pack();
 		
@@ -80,10 +78,9 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-//				currentPanel.setVisible(false);
-				remove(currentPanel);
-				currentPanel = screens.get(1);
-				add(currentPanel);
+				panel.setVisible(false);
+//				remove(panel);
+				add(screens.get(1));
 				pack();
 				
 			}
@@ -94,10 +91,9 @@ public class Frame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				currentPanel.setVisible(false);
-				remove(currentPanel);
-				currentPanel = screens.get(2);
-				add(currentPanel);
+				panel.setVisible(false);
+//				remove(panel);
+				add(screens.get(2));
 				pack();
 			}
 		});
