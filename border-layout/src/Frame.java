@@ -25,7 +25,7 @@ public class Frame extends JFrame {
 		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setVisible(true);
-		//setdefault encerra a execuÃ§Ã£o do sistema quando fechada a tela
+		//setdefault encerra a execução do sistema quando fechada a tela
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
