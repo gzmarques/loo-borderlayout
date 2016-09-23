@@ -19,7 +19,6 @@ public class Frame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = -5151041547543472432L;
-	private JPanel panel;
 
 	public Frame() {
 		Frame frame = this;
@@ -38,7 +37,7 @@ public class Frame extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.darkGray);
-		panel.setSize(800,600);
+		panel.setSize(1000,500);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(10);
 		layout.setVgap(10);

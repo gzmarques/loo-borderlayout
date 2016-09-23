@@ -2,21 +2,15 @@ package panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class Screen2 extends JPanel {
 	
-	Frame frame;
-	
-	public Screen2(Frame frame) {
-		this.frame = frame;
+	public Screen2() {
 		setBackground(Color.RED);
-		setSize(700,600);
+		setSize(1000,600);
 		setVisible(true);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(100);
@@ -33,16 +27,6 @@ public class Screen2 extends JPanel {
 		add(new JButton("West"),BorderLayout.WEST); 
 		add(new JButton("North"),BorderLayout.NORTH); 
 		add(new JButton("South"),BorderLayout.SOUTH); 
-		
-		centerBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				frame.add(new Screen1());
-				
-			}
-		});
 	}
 
 }
