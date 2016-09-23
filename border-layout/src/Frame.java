@@ -10,6 +10,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
+import panels.Screen1;
+import panels.Screen2;
+
 public class Frame extends JFrame {
 
 	/**
@@ -33,7 +36,7 @@ public class Frame extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.darkGray);
-		panel.setSize(300,300);
+		panel.setSize(1000,500);
 		BorderLayout layout = new BorderLayout();
 		layout.setHgap(10);
 		layout.setVgap(10);
@@ -52,6 +55,8 @@ public class Frame extends JFrame {
 		
 		this.add(panel);
 		
+		pack();
+		
 		centerBtn.addActionListener(new ActionListener() {
 			
 			@Override
@@ -60,15 +65,28 @@ public class Frame extends JFrame {
 			}
 		});
 		
-		lineStart.addActionListener(new ActionListener() {
+		open.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
 				remove(panel);
-				layout.setVgap(30);
+				JPanel panel = new Screen1();
 				add(panel);
+				pack();
 				
+			}
+		});
+		
+		lineStart.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				remove(panel);
+				JPanel panel = new Screen2();
+				add(panel);
+				pack();
 			}
 		});
 
