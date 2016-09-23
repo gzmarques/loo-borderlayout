@@ -19,12 +19,13 @@ public class Frame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = -5151041547543472432L;
+	private JPanel panel;
 
 	public Frame() {
 		setSize(800, 600);
 		setLayout(new BorderLayout());
 		setVisible(true);
-		//setdefault encerra a execução do sistema quando fechada a tela
+		//setdefault encerra a execuÃ§Ã£o do sistema quando fechada a tela
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -34,7 +35,7 @@ public class Frame extends JFrame {
 		menuBar.add(file);
 		add(menuBar, BorderLayout.SOUTH);
 		
-		JPanel panel = new JPanel();
+		this.panel = new JPanel();
 		panel.setBackground(Color.darkGray);
 		panel.setSize(1000,500);
 		BorderLayout layout = new BorderLayout();
@@ -71,7 +72,7 @@ public class Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				remove(panel);
-				JPanel panel = new Screen1();
+				panel = new Screen1();
 				add(panel);
 				pack();
 				
@@ -84,7 +85,7 @@ public class Frame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				remove(panel);
-				JPanel panel = new Screen2();
+				panel = new Screen2();
 				add(panel);
 				pack();
 			}
@@ -93,3 +94,4 @@ public class Frame extends JFrame {
 	}
 	
 }
+
