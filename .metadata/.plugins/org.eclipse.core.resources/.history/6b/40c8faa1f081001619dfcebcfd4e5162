@@ -48,7 +48,7 @@ public class Screen2 extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 				frame.add(frame.getScreens().get(1));
-				frame.setMinimumSize(new Dimension(100, 600));
+				frame.setMinimumSize(new Dimension(400, 100));
 				frame.pack();
 			}
 		});
