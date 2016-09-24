@@ -19,15 +19,15 @@ public class Screen1 extends JPanel {
 		setLayout(layout);
 		
 		JButton centerBtn = new JButton("Center");
-		JButton lineStart = new JButton("Line Start");
+		JButton lineStart = new JButton("Before Line Begins");
 		
 		add(centerBtn,BorderLayout.CENTER);
-		add(lineStart,BorderLayout.LINE_START); 
-		add(new JButton("Line End"),BorderLayout.LINE_END);
-		add(new JButton("East"),BorderLayout.EAST);   
-		add(new JButton("West"),BorderLayout.WEST); 
-		add(new JButton("North"),BorderLayout.NORTH); 
-		add(new JButton("South"),BorderLayout.SOUTH); 
+		add(lineStart,BorderLayout.BEFORE_LINE_BEGINS); 
+		add(new JButton("Line End"),BorderLayout.AFTER_LINE_ENDS);
+		add(new JButton("Before Line Begins"),BorderLayout.BEFORE_LINE_BEGINS);   
+		add(new JButton("After Line Ends"),BorderLayout.AFTER_LINE_ENDS); 
+		add(new JButton("Before First Line"),BorderLayout.BEFORE_FIRST_LINE); 
+		add(new JButton("After Last Line"),BorderLayout.AFTER_LAST_LINE); 
 	}
 
 }
